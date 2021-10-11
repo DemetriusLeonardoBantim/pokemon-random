@@ -12,9 +12,6 @@ interface PropsInfoPokemon {
 export const InfoPokemon = ({id} : PropsInfoPokemon) =>{
   const [detailPokemon, setDetailPokemon] = useState<InfoPokemonProps>()
 
-
-
-
   useEffect(() => {
     async function handleInfoPokemon(){
       const response = await buscar(id)
@@ -22,9 +19,7 @@ export const InfoPokemon = ({id} : PropsInfoPokemon) =>{
     }
     handleInfoPokemon()
   }, [id])
-
-
-      
+  
   return(
     <div>
       {
