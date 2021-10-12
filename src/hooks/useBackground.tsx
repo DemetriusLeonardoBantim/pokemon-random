@@ -1,14 +1,9 @@
 import {
   createContext,
-  useEffect,
   useState,
   ReactNode,
   useContext,
 } from 'react';
-
-interface BackgroundColorProps{
-  color:string
-}
 
 interface BackgroundColorProviderProps{
   children: ReactNode;

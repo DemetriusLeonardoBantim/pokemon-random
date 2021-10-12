@@ -1,10 +1,11 @@
-import React, {useState, useEffect} from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import  {useState, useEffect} from 'react'
 import {InfoPokemonProps} from '../../utils/types'
 import {buscar} from '../../services/InfoPokemon'
 import {ContainerContent,InfoPokemonBox,TextType} from './style'
 import {RotatePokeball} from '../rotatePokeball'
 import {useBackgroundColor} from '../../hooks/useBackground'
-import { math } from 'polished'
+
 
 interface PropsInfoPokemon {
   id:string
