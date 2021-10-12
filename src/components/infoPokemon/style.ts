@@ -1,7 +1,7 @@
-import styled,{createGlobalStyle} from "styled-components";
+import styled from "styled-components";
 
 export const Container = styled.body`
-  background-color: red;
+
 `
 
 
