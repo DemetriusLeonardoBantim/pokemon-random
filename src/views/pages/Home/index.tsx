@@ -3,7 +3,7 @@ import {Container,ContainerContent} from './style'
 import pokemonLogo from '../../../assets/logo.png'
 import {InfoPokemon} from '../../../components/infoPokemon'
 import {getRandomInt} from '../../../utils/getRandomInt'
-
+import {useBackgroundColor} from '../../../hooks/useBackground'
 
 
 
@@ -12,6 +12,7 @@ import {getRandomInt} from '../../../utils/getRandomInt'
 
 export const Home = () => {
   const [infoPokemon, setInfokemon] = useState('')
+  const {color} = useBackgroundColor()
 
     async function handleGetPokemon(){
       const id = getRandomInt(1,150)
@@ -19,7 +20,7 @@ export const Home = () => {
     }
     
   return(
-    <Container>
+    <Container color={'--'+color}>
       <ContainerContent>
         <img src={pokemonLogo} alt="logo"/>
         <button onClick={handleGetPokemon}>Get a random pokemon</button>
